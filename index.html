@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Teletext (v. 0.1)</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Teletext</h1>
+
+    <p>
+      Visualizzatore del segnale televideo della rai
+    </p>
+
+    <!-- Scelta provider ------------------------------------------>
+    <div id="prov_sel" class="btn-group">
+      <label for="b_provselect">Seleziona l'emittente</label>
+      <select id="b_provselect">
+        <option>rai</option>
+      </select>
+    </div>
+
+    <!-- Barra di navigazione nei preferiti --------------------------->
+    <div id="fav_sel" class="btn-group">
+      <button id="b_favdown">f down</button>
+      <button id="b_favset">set/unset preferito</button>
+      <button id="b_favup">f up</button>
+      <select id="b_favselect">
+        <option>100</option>
+      </select>
+    </div>
+
+    <br />
+
+    <div>
+      <input type="radio" id="pagescroll" name="scroll" value="page" checked />
+      <label for="pagescroll">scroll pagina</label>
+      <input type="radio" id="favscroll" name="scroll" value="fav" />
+      <label for="favscroll">scroll fav</label>
+    </div>
+
+    <br />
+
+    <!-- Barra di navigazione nelle pagina --------------------------->
+    <div id="page_sel" class="btn-group">
+      <button id="b_pagedown">p down</button>
+      <button id="b_subdown">s down</button>
+      <button id="b_home">home</button>
+      <button id="b_subup">s up</button>
+      <button id="b_pageup">p up</button>
+      <input type="number" id="b_pagina" value="pagina" />;
+    </div>
+
+    <!-- Carica immagine della pagina di televideo --------------------------->
+    <img id="teletextFrame" src="pagina" width="648" height="404" />
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
